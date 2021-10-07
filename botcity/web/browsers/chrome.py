@@ -49,11 +49,6 @@ def default_options(headless=False, download_folder_path=None, user_data_dir=Non
         download_folder_path = os.path.join(os.path.expanduser("~"), "Desktop")
 
     app_state = {
-        'recentDestinations': [{
-            'id': 'Save as PDF',
-            'origin': 'local'
-        }],
-        'selectedDestinationId': 'Save as PDF',
         'version': 2
     }
 
@@ -64,7 +59,7 @@ def default_options(headless=False, download_folder_path=None, user_data_dir=Non
         "savefile.default_directory": download_folder_path,
         "printing.default_destination_selection_rules": {
             "kind": "local",
-            "namePattern": "Save as PDF",
+            "namePattern": ".*PDF.*",
         },
         "safebrowsing.enabled": True
     }
